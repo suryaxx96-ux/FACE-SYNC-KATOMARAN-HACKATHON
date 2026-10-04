@@ -1,0 +1,23 @@
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local video footage and biometric visitor database (keep private)
+data/*.mp4
+data/visitors.db
+data/visitors.db-shm
+data/visitors.db-wal
+
+# Generated annotated exports and local UI console log
+output/
+logs/ui_console.log
+
+# Runtime evidence images may contain identifiable faces
+logs/entries/
+logs/exits/
+
+# Temporary files
+*.tmp
+*.lnk

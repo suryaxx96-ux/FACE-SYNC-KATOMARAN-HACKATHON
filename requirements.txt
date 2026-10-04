@@ -1,0 +1,7 @@
+ultralytics>=8.2.0
+insightface>=0.7.3
+onnxruntime>=1.17.0        # use onnxruntime-gpu instead if you have an NVIDIA GPU
+opencv-python>=4.8.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-image<0.26  # InsightFace face alignment uses the deprecated SimilarityTransform.estimate API

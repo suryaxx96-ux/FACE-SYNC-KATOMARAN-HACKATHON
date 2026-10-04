@@ -1,0 +1,56 @@
+{
+  "input": {
+    "mode": "video",
+    "video_path": "data/sample4.mp4",
+    "rtsp_url": "rtsp://username:password@192.168.1.10:554/stream1",
+    "reconnect_attempts": 10,
+    "reconnect_delay_sec": 3
+  },
+  "detection": {
+    "model_path": "models/yolov8n-face.pt",
+    "conf_threshold": 0.10,
+    "imgsz": 640,
+    "tile_inference": true,
+    "tile_fraction": 0.50,
+    "nms_iou_threshold": 0.50,
+    "nms_ios_threshold": 0.75,
+    "nms_center_threshold": 0.60,
+    "device": "auto",
+    "detection_skip_frames": 0,
+    "scrfd_fallback_interval": 3,
+    "scrfd_fallback_size": 512
+  },
+  "recognition": {
+    "model_name": "buffalo_l",
+    "similarity_threshold": 0.4,
+    "gallery_update_threshold": 0.6,
+    "min_samples": 2,
+    "max_attempts": 20,
+    "min_face_size": 18,
+    "min_sharpness": 0.0,
+    "min_face_detection_score": 0.40,
+    "min_embedding_box_iou": 0.08,
+    "max_landmark_offset_ratio": 0.80,
+    "max_eye_vertical_offset_ratio": 0.70,
+    "det_size": 256,
+    "det_threshold": 0.25,
+    "crop_margin": 0.3
+  },
+  "tracking": {
+    "iou_threshold": 0.3,
+    "max_lost_frames": 30,
+    "min_hits": 2,
+    "reentry_grace_frames": 120
+  },
+  "storage": {
+    "db_path": "data/visitors.db",
+    "logs_dir": "logs",
+    "log_file": "logs/events.log",
+    "reset_on_start": true
+  },
+  "output": {
+    "show_window": false,
+    "annotated_video_path": "output/annotated.mp4",
+    "stats_every_n_frames": 30
+  }
+}
